@@ -1,4 +1,4 @@
-import { ONBOARDING_CONFIG } from './onboarding-config.js';
+import { ONBOARDING_CONFIG } from '../onboarding-config.js';
 import {
   AVAILABLE_TEMPLATES,
   DEFAULT_STYLES,
@@ -8,7 +8,7 @@ import {
   formatINR,
   validateCashRequest,
   validateOnboarding
-} from './onboarding-core.js';
+} from '../onboarding-core.js';
 
 const form = document.getElementById('onboarding-form');
 const steps = [...document.querySelectorAll('.form-step')];
@@ -73,7 +73,6 @@ function buildTimePicker12h(value, prefix, eventIndex) {
     '</div>';
 }
 
-
 function checkIsPaymentVerified(paymentStatus, advanceVerifiedPaise = 0, orderStatus = '') {
   const p = String(paymentStatus || '').trim().toLowerCase();
   const o = String(orderStatus || '').trim().toLowerCase();
@@ -127,6 +126,7 @@ function applyPaymentStatusState(paymentStatus, advanceVerifiedPaise = 0, orderS
     if (finePrint) finePrint.hidden = true;
   }
 }
+
 function showError(message, fieldErrors = {}) {
   const fieldMessages = Object.values(fieldErrors).filter(fieldMessage => !message.includes(fieldMessage));
   errorBox.textContent = [message, ...fieldMessages].filter(Boolean).join(' ');
