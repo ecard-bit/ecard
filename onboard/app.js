@@ -1,4 +1,4 @@
-import { ONBOARDING_CONFIG } from '../onboarding-config.js';
+import { ONBOARDING_CONFIG } from './onboarding-config.js';
 import {
   AVAILABLE_TEMPLATES,
   DEFAULT_STYLES,
