@@ -1,4 +1,4 @@
-import { ONBOARDING_CONFIG } from '/onboarding-config.js';
+import { ONBOARDING_CONFIG } from './onboarding-config.js';
 import {
   AVAILABLE_TEMPLATES,
   DEFAULT_STYLES,
@@ -8,7 +8,7 @@ import {
   formatINR,
   validateCashRequest,
   validateOnboarding
-} from '../onboarding-core.js';
+} from './onboarding-core.js';
 
 const form = document.getElementById('onboarding-form');
 const steps = [...document.querySelectorAll('.form-step')];
